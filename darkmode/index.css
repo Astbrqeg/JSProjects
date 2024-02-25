@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aliceblue;
+    color: black;
+}
+
+h1 {
+    font-size: 45px; 
+}
+
+
+.mode{
+    width: 10rem;
+    height: 10rem;
+    background: none;
+    border: none;
+}
+
+.dark-mode {
+    background-color: #070a13;
+    color: #f1f5f9;
+  }
+
+.dark-mode .mode svg{
+    fill: #f1f5f9;
+}

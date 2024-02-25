@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440px, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <section class="container">
+        <form id="book-form">
+            <div class="title-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                  <path d="M3 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H3zm0 1h10a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 13V2a1 1 0 0 1 1-1h1v12l-1-1v1a1 1 0 0 1-1 1H3z"/>
+                </svg>
+                <h2>My Book List</h2> 
+              </div>
+            <div>
+                <label for="title">Book Title</label>
+                <input type="text" id="title" />
+            </div>
+            <div>
+                <label for="author">Book Author</label>
+                <input type="text" id="author" />
+            </div>
+            <div>
+                <label for="year">Published Year</label>
+                <select id="year"></select>
+
+            </div>
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+
+        <section class="table">
+            <section class="table-section">
+                <div>Title</div>
+                <div>Author</div>
+                <div>Year</div>
+
+            </section>
+
+            <section id="book-list"></section>
+        </section>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
