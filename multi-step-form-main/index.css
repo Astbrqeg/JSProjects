@@ -1,0 +1,442 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(47, 18, 18, 0.101);
+  width: 900px;
+  height: 568px;
+}
+
+
+.sidebar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+  margin: 15px;
+  border-radius: 10px;
+}
+
+/* Circle styles */
+.circle {
+  background-color: rgba(220, 20, 60, 0);
+  color: white;
+  font-weight: 500;
+  width: 20%;
+  height: 50%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Active circle styles */
+.circle div.active {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.circle1 {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+/* Common circle styles */
+.circle div {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps {
+  position: relative;
+  background-color: rgba(255, 255, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 50%;
+  margin-top: 15%;
+  margin-left: 0%;
+}
+
+.step {
+  position: inherit;
+  padding-left: 5px;
+  background-color: rgba(156, 55, 55, 0);
+}
+
+.steps p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+
+.step span {
+  color: white;
+}
+
+
+
+/*Step 1 styles */
+.stp .step1 {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.step1 h1 {
+  font-size: 30px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+
+}
+
+.step1 p {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 20px;
+}
+
+.step1 .inputs {
+  margin-bottom: 20px;
+  width: 75%;
+  display: grid;
+}
+
+.step1 span .error {
+  margin-left: 55%;
+}
+
+.step1 p,
+.step1 input {
+  margin-bottom: 10px;
+}
+
+.step1 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.step1 input:focus {
+  outline: none;
+  border-color: hsl(243, 100%, 62%);
+  color: hsl(243, 100%, 62%);
+}
+
+
+.step1 .stepname {
+  color: hsl(243, 100%, 62%);
+}
+
+.step1 button {
+  background-color: hsl(243, 100%, 62%);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+/*Step 2 styles */
+.stp .step2 {
+  padding: 20px;
+  width: 100%;
+}
+
+.step2 h1 {
+  font-size: 24px;
+  color: hsl(213, 96%, 18%);
+}
+
+.step2 p {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.plan {
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 150px;
+  border: 1px solid hsl(213, 96%, 18%);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.plan img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto;
+}
+
+p.monthly,
+p.yearly {
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: .4s;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+p.sw-active {
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+}
+
+
+.nxtbak {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: baseline;
+}
+
+/*Step 3 styles */
+.stp .step3 {
+  display: flex;
+  justify-content: center;
+}
+
+.step3 h1 {
+  font-size: 24px;
+  color: hsl(213, 96%, 18%);
+}
+
+.step3 p {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 500px;
+}
+
+
+.box input {
+  margin-right: 10px;
+}
+
+.ad-selected {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+
+
+label {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+
+.nxtbak button {
+  background-color: hsl(243, 100%, 62%);
+  margin-top: 80px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.box .description {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box .price {
+  margin-left: 10px;
+}
+
+b {
+  color: hsl(243, 100%, 62%);
+  font-size: 25px;
+}
+
+/*Step 4 styles */
+.stp .step4 {
+  padding: 20px;
+  width: 100%;
+}
+
+.step4 h1 {
+  font-size: 24px;
+  color: hsl(213, 96%, 18%);
+}
+
+.step4 .paragraph {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 20px;
+}
+
+.selected-plan,
+.selected-addon {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.selection-container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(229, 24%, 87%);
+  border-radius: 15px;
+}
+
+.plan-name,
+.plan-price {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  font-size: 23px;
+}
+
+hr{
+  border: 2px solid hsl(231, 11%, 63%);
+  width: 85%;
+}
+
+.service-name {
+  color: hsl(231, 11%, 63%);
+  font-weight: 700;
+}
+
+.service-price {
+  color: hsl(213, 96%, 18%);
+  font-size: 20px;
+}
+
+
+
+.selected-addon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.total {
+  font-size: 18px;
+  color: hsl(213, 96%, 18%);
+}
+
+
+
+/*Step 5 styles */
+.st5 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step5 img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.step5 h1 {
+  font-size: 24px;
+  color: hsl(213, 96%, 18%);
+}
+
+.step5 p {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 20px;
+}
